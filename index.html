@@ -66,6 +66,13 @@
 }
 
   </style>
+  <script>
+    // Reproducir al entrar al body (pasar el mouse)
+    document.body.addEventListener("mouseenter", function() {
+      const audio = document.getElementById("myAudio");
+      audio.play().catch(e => console.log("Error al reproducir:", e));
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Funniest - XS</title>
 </head>
@@ -121,13 +128,7 @@
       </div>
     </div>
   </main>
-  <script>
-    // Reproducir al entrar al body (pasar el mouse)
-    document.body.addEventListener("mouseenter", function() {
-      const audio = document.getElementById("myAudio");
-      audio.play().catch(e => console.log("Error al reproducir:", e));
-    });
-  </script>
+  
 </body>
 
 
