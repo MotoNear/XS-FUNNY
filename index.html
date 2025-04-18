@@ -117,10 +117,17 @@
       </div>
       <div class=" musica-banner h-[50%] w-[100%]">
 
-        <audio autoplay src="./music/sade-pearls.mp3"></audio>
+        <audio id="myAudio" autoplay="" src="./music/sade-pearls.mp3"></audio>
       </div>
     </div>
   </main>
+  <script>
+    // Reproducir al entrar al body (pasar el mouse)
+    document.body.addEventListener("mouseenter", function() {
+      const audio = document.getElementById("myAudio");
+      audio.play().catch(e => console.log("Error al reproducir:", e));
+    });
+  </script>
 </body>
 
 
